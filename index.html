@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Tracking Dashboard</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>🚌 Campus Transit Dashboard</h2>
+    <span class="live">● Live Tracking</span>
+  </div>
+
+  <!-- DASHBOARD CARDS -->
+  <div class="cards">
+    <div class="card">
+      <p>Total Buses</p>
+      <h2 id="total">0</h2>
+    </div>
+
+    <div class="card">
+      <p>Active</p>
+      <h2 id="active">0</h2>
+    </div>
+
+    <div class="card">
+      <p>Delayed</p>
+      <h2 id="delayed">0</h2>
+    </div>
+
+    <div class="card">
+      <p>Completed</p>
+      <h2 id="completed">0</h2>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+
+      <!-- ACTIVE -->
+      <h3>🚍 Active Buses</h3>
+      <div id="busList"></div>
+
+      <!-- COMPLETED -->
+      <h3 style="margin-top:20px;">✅ Completed Buses</h3>
+      <div id="completedList"></div>
+
+      <!-- DELAYED -->
+      <h3 style="margin-top:20px;">⚠️ Delayed Buses</h3>
+      <div id="delayedList"></div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+      <div class="map-header">
+        <h3>📍 Live Map View</h3>
+      </div>
+
+      <div id="map"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
